@@ -26,7 +26,7 @@ console.log("Increment each element:", applique(function(n) { return n + 1; }, [
 //--------------------------------------------
 
 // Server URL
-const SERVER_URL = 'http://localhost:8080';
+const SERVER_URL = 'https://cs-projet-architecture-applicative.onrender.com';
 
 // Common emojis for the emoji picker
 const commonEmojis = ["👍", "👎", "😊", "😂", "❤️", "🎉", "👏", "🤔", "😍", "🙏"];
