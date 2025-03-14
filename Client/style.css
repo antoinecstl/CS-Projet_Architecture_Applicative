@@ -356,6 +356,35 @@ body.dark-theme #messages-list::-webkit-scrollbar-thumb {
     background: var(--primary-color);
 }
 
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+/* Dark theme footer */
+body.dark-theme footer {
+    color: #aaa;
+}
+
+body.dark-theme footer a {
+    color: var(--primary-color);
+}
+
 /* Responsive design */
 @media (max-width: 700px) {
     main {
