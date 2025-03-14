@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum de discussion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💬</text></svg>">
+</head>
+<body>
+    <header>
+        <h1>Forum de discussion</h1>
+    </header>
+    
+    <main>
+        <section id="messages-section">
+            <h2>Messages récents</h2>
+            <ul id="messages-list">
+                <!-- Messages loaded dynamically -->
+                <li>Chargement des messages...</li>
+            </ul>
+        </section>
+        
+        <section id="post-section">
+            <h2>Poster un message</h2>
+            <div class="form-group">
+                <label for="pseudo">Pseudo:</label>
+                <input type="text" id="pseudo" placeholder="Votre pseudo" autocomplete="nickname">
+            </div>
+            <div class="form-group">
+                <label for="message-input">Message:</label>
+                <textarea id="message-input" rows="4" placeholder="Écrivez votre message ici..."></textarea>
+                <div class="message-actions">
+                    <button id="emoji-button" class="emoji-button" type="button">😊</button>
+                </div>
+            </div>
+            <button id="send-button">Envoyer</button>
+            <button id="update-button">Mettre à jour</button>
+        </section>
+        
+        <section id="style-section">
+            <h2>Préférences</h2>
+            <button id="toggle-style">Passer en mode sombre</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
