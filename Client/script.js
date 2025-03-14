@@ -116,9 +116,8 @@ function update(messages) {
         messagesList.appendChild(li);
     });
     
-    // Scroll to the bottom of the messages container
-    const messagesContainer = messagesList.parentElement;
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    // Scroll to the bottom of the messages list (which is the scrollable container)
+    messagesList.scrollTop = messagesList.scrollHeight;
 }
 
 // Fetch all messages from the server
@@ -175,8 +174,7 @@ function addMessage() {
                 
                 // Scroll to bottom after adding new message
                 const messagesList = document.getElementById("messages-list");
-                const messagesContainer = messagesList.parentElement;
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                messagesList.scrollTop = messagesList.scrollHeight;
                 
                 messageInput.value = "";
                 
