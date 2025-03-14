@@ -115,6 +115,10 @@ function update(messages) {
         
         messagesList.appendChild(li);
     });
+    
+    // Scroll to the bottom of the messages container
+    const messagesContainer = messagesList.parentElement;
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
 // Fetch all messages from the server
@@ -168,6 +172,12 @@ function addMessage() {
                 
                 // Refresh messages from server
                 fetchMessages();
+                
+                // Scroll to bottom after adding new message
+                const messagesList = document.getElementById("messages-list");
+                const messagesContainer = messagesList.parentElement;
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
                 messageInput.value = "";
                 
                 // Re-enable the send button
